@@ -1,5 +1,10 @@
 # Sysctl
 
+## v1.0.7 (2018-07-19)
+
+- TWDC fork
+- Include environment declarations for execute resources to prevent failures during cron/bootstrap due to incomplete PATH
+
 ## v1.0.5 (2018-04-27)
 
 - Remove the last remains of the parameter backup functionality in the param resource

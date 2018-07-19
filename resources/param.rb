@@ -56,6 +56,7 @@ action :apply do
     end
 
     execute 'Load sysctl values' do
+      environment ({"PATH" => "/sbin:/bin:/usr/sbin:/usr/bin"})
       command "sysctl #{'-e ' if new_resource.ignore_error}-p"
       action :run
     end
@@ -71,6 +72,7 @@ action :remove do
       end
 
       execute 'Load sysctl values' do
+        environment ({"PATH" => "/sbin:/bin:/usr/sbin:/usr/bin"})
         command 'sysctl -p'
         action :run
       end
